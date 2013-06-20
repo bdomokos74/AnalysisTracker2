@@ -1,4 +1,7 @@
 AnalysisTracker2::Application.routes.draw do
+  resources :analysis_tasks
+
+
   resources :servers
 
 

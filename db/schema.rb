@@ -11,7 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130620114218) do
+ActiveRecord::Schema.define(:version => 20130620132435) do
+
+  create_table "analysis_tasks", :force => true do |t|
+    t.integer  "server_id"
+    t.integer  "run_id"
+    t.string   "project_name"
+    t.string   "description"
+    t.string   "script_template"
+    t.string   "script_params"
+    t.integer  "duration"
+    t.string   "status"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
 
   create_table "servers", :force => true do |t|
     t.string   "ip"

@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Server:</b>
+  <%= @analysis_task.server_id %>
+</p>
+
+<p>
+  <b>Run:</b>
+  <%= @analysis_task.run_id %>
+</p>
+
+<p>
+  <b>Project name:</b>
+  <%= @analysis_task.project_name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @analysis_task.description %>
+</p>
+
+<p>
+  <b>Script template:</b>
+  <%= @analysis_task.script_template %>
+</p>
+
+<p>
+  <b>Script params:</b>
+  <%= @analysis_task.script_params %>
+</p>
+
+<p>
+  <b>Duration:</b>
+  <%= @analysis_task.duration %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @analysis_task.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_analysis_task_path(@analysis_task) %> |
+<%= link_to 'Back', analysis_tasks_path %>

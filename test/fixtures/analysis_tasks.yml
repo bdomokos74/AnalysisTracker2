@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  server_id: 1
+  run_id: 1
+  project_name: MyString
+  description: MyString
+  script_template: MyString
+  script_params: MyString
+  duration: 1
+  status: MyString
+
+two:
+  server_id: 1
+  run_id: 1
+  project_name: MyString
+  description: MyString
+  script_template: MyString
+  script_params: MyString
+  duration: 1
+  status: MyString

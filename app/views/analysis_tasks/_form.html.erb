@@ -1,0 +1,49 @@
+<%= form_for(@analysis_task) do |f| %>
+  <% if @analysis_task.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@analysis_task.errors.count, "error") %> prohibited this analysis_task from being saved:</h2>
+
+      <ul>
+      <% @analysis_task.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :server_id %><br />
+    <%= f.number_field :server_id %>
+  </div>
+  <div class="field">
+    <%= f.label :run_id %><br />
+    <%= f.number_field :run_id %>
+  </div>
+  <div class="field">
+    <%= f.label :project_name %><br />
+    <%= f.text_field :project_name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :script_template %><br />
+    <%= f.text_field :script_template %>
+  </div>
+  <div class="field">
+    <%= f.label :script_params %><br />
+    <%= f.text_field :script_params %>
+  </div>
+  <div class="field">
+    <%= f.label :duration %><br />
+    <%= f.number_field :duration %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
