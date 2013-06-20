@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ip: MyString
+  adminuser: MyString
+  rootdir: MyString
+  status: MyString
+  priority: 1
+
+two:
+  ip: MyString
+  adminuser: MyString
+  rootdir: MyString
+  status: MyString
+  priority: 1

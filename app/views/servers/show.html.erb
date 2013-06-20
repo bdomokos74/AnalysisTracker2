@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Ip:</b>
+  <%= @server.ip %>
+</p>
+
+<p>
+  <b>Adminuser:</b>
+  <%= @server.adminuser %>
+</p>
+
+<p>
+  <b>Rootdir:</b>
+  <%= @server.rootdir %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @server.status %>
+</p>
+
+<p>
+  <b>Priority:</b>
+  <%= @server.priority %>
+</p>
+
+
+<%= link_to 'Edit', edit_server_path(@server) %> |
+<%= link_to 'Back', servers_path %>
