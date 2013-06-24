@@ -3,7 +3,10 @@ import sys
 
 def main():
     file_name = sys.argv[1]
-    file = open(file_name, "r")
+    if file_name == "stdin":
+        file = sys.stdin
+    else:
+        file = open(file_name, "r")
     limited = True
     start = -1
     num = -1
@@ -31,7 +34,8 @@ def main():
         curr += 1
         if limited and printed>= num:
             break
-    file.close()
+    if file_name != "stdin":
+        file.close()
 
 if __name__ == "__main__":
     main()
