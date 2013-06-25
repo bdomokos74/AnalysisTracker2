@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>Id</th>
     <th>Ip</th>
     <th>Adminuser</th>
     <th>Rootdir</th>
@@ -14,6 +15,7 @@
 
 <% @servers.each do |server| %>
   <tr>
+    <td><%= server.id %></td>
     <td><%= server.ip %></td>
     <td><%= server.adminuser %></td>
     <td><%= server.rootdir %></td>

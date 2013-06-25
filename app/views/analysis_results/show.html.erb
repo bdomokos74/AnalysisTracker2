@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Task:</b>
+  <%= @analysis_result.task_id %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @analysis_result.status %>
+</p>
+
+<p>
+  <b>Duration:</b>
+  <%= @analysis_result.duration %>
+</p>
+
+
+<%= link_to 'Edit', edit_analysis_result_path(@analysis_result) %> |
+<%= link_to 'Back', analysis_results_path %>

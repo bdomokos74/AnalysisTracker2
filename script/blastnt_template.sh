@@ -9,6 +9,7 @@ export RUN_ID=@RUN_ID@
 export START_INDEX=@START_INDEX@
 export BATCH_SIZE=@BATCH_SIZE@
 export QUERY_FILE=@QUERY_FILE@
+export SERVER_URL=@SERVER_URL@
 
 ##################################
 
@@ -27,5 +28,11 @@ source ${SCRIPT_DIR}/workflow_utils.sh
 
 ##################################
 
-CMD="zcat $DATA_DIR/$QUERY_FILE | python ${SCRIPT_DIR}/fastq2fasta.py stdin $START_INDEX $BATCH_SIZE |blastn -db nt -num_threads 14 -evalue 1e-5 -outfmt '7' > ${RESULT_DIR}/${QUERY_FILE}_${START_INDEX}.blastn"
-run_and_log $CMD
+ls $DATA_DIR/$QUERY_FILE
+ERR=$?
+if (( $ERR )); then
+    fail_and_log_server $RUN_ID $ERR
+else
+    CMD="zcat $DATA_DIR/$QUERY_FILE | python ${SCRIPT_DIR}/fastq2fasta.py stdin $START_INDEX $BATCH_SIZE |blastn -db nt -num_threads 14 -evalue 1e-5 -outfmt '7' > ${RESULT_DIR}/${QUERY_FILE}_${START_INDEX}.blastn"
+    run_and_log_server $CMD
+fi

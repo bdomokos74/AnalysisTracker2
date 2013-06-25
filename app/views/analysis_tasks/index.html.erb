@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>Id</th>
     <th>Server</th>
     <th>Run</th>
     <th>Project name</th>
@@ -17,6 +18,7 @@
 
 <% @analysis_tasks.each do |analysis_task| %>
   <tr>
+    <td><%= analysis_task.id %></td>
     <td><%= analysis_task.server_id %></td>
     <td><%= analysis_task.run_id %></td>
     <td><%= analysis_task.project_name %></td>

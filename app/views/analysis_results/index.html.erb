@@ -1,0 +1,27 @@
+<h1>Listing analysis_results</h1>
+
+<table>
+  <tr>
+    <th>Task</th>
+    <th>Status</th>
+    <th>Duration</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @analysis_results.each do |analysis_result| %>
+  <tr>
+    <td><%= analysis_result.task_id %></td>
+    <td><%= analysis_result.status %></td>
+    <td><%= analysis_result.duration %></td>
+    <td><%= link_to 'Show', analysis_result %></td>
+    <td><%= link_to 'Edit', edit_analysis_result_path(analysis_result) %></td>
+    <td><%= link_to 'Destroy', analysis_result, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Analysis result', new_analysis_result_path %>

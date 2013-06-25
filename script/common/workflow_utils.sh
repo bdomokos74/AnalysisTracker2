@@ -74,3 +74,25 @@ EOS
     echo "Err variable: $ERR"
 }
 
+function run_and_log_server {
+    local PREFIX=$RUN_ID
+    START_DATE=`date +"%Y-%m-%d %H:%M:%S"`
+    echo "#${PREFIX}[$START_DATE] Executing => $@" >> $LOGFILE
+    /usr/bin/time -o ${LOGFILE} -a -f "${PREFIX}${LOGFORMAT}" eval_str.sh $@
+    ERR=$?
+    END_DATE=`date +"%Y-%m-%d %H:%M:%S"`
+    if (( $ERR )); then
+        echo "#${PREFIX}[$END_DATE] Failed ($ERR) => $@" >> ${LOGFILE}
+    else
+        echo "#${PREFIX}[$END_DATE] Success => $@" >> ${LOGFILE}
+    fi
+    duration=`python ${SCRIPT_DIR}/timediff.py "$START_DATE" "$END_DATE"`
+    #echo "$SERVER_URL runid=$RUN_ID err=$ERR dur=$duration" >> $LOGFILE
+    python ${SCRIPT_DIR}/bookkeeping.py $SERVER_URL $RUN_ID $ERR $duration
+}
+
+function fail_and_log_server {
+    local RUN_ID=$1
+    local ERR=$2
+    python ${SCRIPT_DIR}/bookkeeping.py $SERVER_URL $RUN_ID $ERR 0
+}
