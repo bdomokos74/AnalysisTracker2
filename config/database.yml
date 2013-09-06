@@ -24,4 +24,4 @@ production:
   database: tracker
   pool: 5
   username: root
-  password: root
+  password: abc123

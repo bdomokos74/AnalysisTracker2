@@ -23,7 +23,7 @@ def main():
         os.system("ssh %s 'cd %s; mkdir -p data; mkdir -p script; mkdir -p result' "%(server_ip, project_dir))
 
     # copy scripts
-    scripts = ["eval_str.sh", "workflow_utils.sh", "timediff.py", "notify_by_mail.py", "fasta_split.py", "fastq2fasta.py"]
+    scripts = ["eval_str.sh", "workflow_utils.sh", "timediff.py", "notify_by_mail.py", "fasta_split.py", "fastq2fasta.py", "lcs_proc.py"]
 
     if loc:
         for s in scripts:

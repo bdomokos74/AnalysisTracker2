@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AnalysisTracker2</title>
+    <%= stylesheet_link_tag  "main", :media => "all" %>
+    <%= stylesheet_link_tag  "application", :media => "all" %>
+    <%= stylesheet_link_tag "datatables", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+</head>
+
+<body>
+
+<div class="menuBanner theme_banner">
+    <div class="topLeft">
+        <div class="menuBanner_title theme_font">BioTools</div>
+    </div>
+    <div class="topRight">
+        <div class="menuBanner_title theme_font theme_background_panel_highlight" style="padding: 0;">
+            <div id="openSettingsMenu">
+                <span class="symbol">S</span>
+                Settings
+                <span class="symbol">{</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="theme_transparent" style="margin-top: 30px;">
+    <div>
+        <div id="sidePanel" style="left: 0px; background-color: #1BA0E1;">
+            <div id="panelContent" class="theme_background_highlight">
+                <div class="left_sidebar_content">
+                    <div id="pinSidebarButton" class="theme_side_button">
+                        <div class="icon pinned"></div>
+                    </div>
+                    <center>
+                        <img style="margin-left:-20px;margin-top: -20px;" src="<%= asset_path @icon %>">
+                    </center>
+                    <br>
+
+                    <div style="font-size: 18px;margin-bottom: 20px;">
+                        Tracker
+                    </div>
+                    <!--<g:pageProperty name="page.sidebar"/>-->
+                    <button id="servers_button" class="sbutton theme_button">Servers</button>
+                    <button id="tasks_button" class="sbutton theme_button ">Tasks</button>
+                    <div class="sidebar_delimiter"
+                         style="height: 5px;border-bottom: solid 1px #ffffff;margin-right: 20px;"></div>
+
+
+
+                    <!--<g:ifPageProperty name="page.information">-->
+                        <!--<div style="width:180px;padding-top: 10px;">-->
+                            <!--<g:pageProperty name="page.information"/>-->
+                        <!--</div>-->
+                    <!--</g:ifPageProperty>-->
+                </div>
+            </div>
+
+            <div id="panelHandle" class="theme_background_highlight theme_shadow"></div>
+        </div>
+
+        <div style="float: right;width: 50px;"></div>
+
+        <div class="main_content">
+            <%= yield %>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<div id="serversTableContainer" class="dataTableContainer">
+    <h1 class="theme_title">Tasks</h1>
+
+    <div id="serversTable_wrapper" class="dataTables_wrapper">
+        <div id="serversTable_length" class="dataTables_length">
+            Show
+            <select name="serversTable_length" size="1">
+                <option value="10" selected="selected">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+            entries
+        </div>
+        <div id="serversTable_filter" class="dataTables_filter">
+            Search:
+            <input type="text">
+        </div>
+        <div id="serversTable_processing" class="dataTables_processing" style="visibility: hidden;">Processing...</div>
+
+        <table id="serversTable" class="dataTables" width="100%;">
+            <thead>
+            <tr>
+                <th class="sorting">ID</th>
+                <th class="sorting_desc">Patient ID</th>
+                <th class="sorting">Profile</th>
+                <th class="sorting">Created</th>
+                <th class="sorting">Created by</th>
+                <th class="sorting_disabled text_italic">Status %</th>
+                <th class="sorting_disabled text_italic">Status</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr class="odd">
+                    <td>99</td>
+                    <td class=" sorting_1">pp99</td>
+                    <td>control</td>
+                    <td>08/16/2013 11:19 AM</td>
+                    <td>balint.domokos@astridbio.com</td>
+                    <td class="text_italic">100%</td>
+                    <td class="text_italic">completed</td>
+                </tr>
+                <tr class="even">
+                    <td>98</td>
+                    <td class=" sorting_1">pp98</td>
+                    <td>control</td>
+                    <td>08/16/2013 11:19 AM</td>
+                    <td>balint.domokos@astridbio.com</td>
+                    <td class="text_italic">100%</td>
+                    <td class="text_italic">completed</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    <%= render :partial => "pages.js" %>
+</script>

@@ -1,0 +1,4 @@
+PATH=/home/bdomokos/projects/current/live/AnalysisTracker2/script:/usr/sbin:/usr/sbin:/usr/bin:/sbin:/bin
+
+# Activity reports every 2 minutes everyday
+*/2 * * * * root checker_cron.sh >> /var/log/analysistracker2.log

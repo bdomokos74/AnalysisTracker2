@@ -1,0 +1,442 @@
+.dataTableContainer {
+    clear: both;
+    padding-top: 20px;
+}
+
+.dataTables {
+    clear: both; /* required to firefox */
+    padding: 0 !important;
+    font-family: "Open Sans", arial, sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+}
+
+.dataTables, .dataTables tbody tr td {
+    border: none !important;
+    border-spacing: 0 !important;
+    padding: 5px;
+}
+
+
+
+.dataTables td:nth-child(1) {
+    font-size: 0;
+}
+.dataTables th:nth-child(1) {
+    font-size: 0;
+}
+
+.dataTables th {
+    text-align: left;
+    margin-left: 5px;
+}
+
+.dataTables th:nth-child(1) {
+   background-image: none; !important;
+}
+
+.dataTables_empty {
+    font-size: 8pt !important;
+}
+
+.dataTables_wrapper {
+    position: relative;
+    min-height: 50px;
+    zoom: 1; /* Feeling sorry for IE */
+
+    font-family: "Open Sans",arial,sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.dataTables_processing {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 30px;
+    margin-left: -125px;
+    margin-top: -15px;
+    padding: 14px 0 2px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.dataTables_length {
+    width: 50%;
+    float: left;
+    height: 25px;
+}
+
+.dataTables_filter {
+    width: 50%;
+    float: right;
+    text-align: right;
+    height: 25px;
+}
+
+.dataTables_info {
+    height: 22px;
+    line-height: 22px;
+    width: 30%;
+    float: left;
+}
+
+.dataTables_paginate {
+    width: 44px;
+    * width: 50px;
+    float: right;
+    text-align: right;
+}
+
+/* Pagination nested */
+.paginate_disabled_previous, .paginate_enabled_previous, .paginate_disabled_next, .paginate_enabled_next {
+    height: 19px;
+    width: 19px;
+    margin-left: 3px;
+    float: left;
+}
+
+.paginate_disabled_previous {
+    background-image: url(<%= asset_path 'datatable/back_disabled.jpg' %>);
+}
+
+.paginate_enabled_previous {
+    background-image: url(<%= asset_path 'datatable/back_enabled.jpg' %>);
+}
+
+.paginate_disabled_next {
+    background-image: url(<%= asset_path 'datatable/forward_disabled.jpg' %>);
+}
+
+.paginate_enabled_next {
+    background-image: url(<%= asset_path 'datatable/forward_enabled.jpg' %>);
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables display
+ */
+table.display {
+    margin: 0 auto;
+    clear: both;
+    width: 100%;
+
+    /* Note Firefox 3.5 and before have a bug with border-collapse
+      * ( https://bugzilla.mozilla.org/show%5Fbug.cgi?id=155955 )
+      * border-spacing: 0; is one possible option. Conditional-css.com is
+      * useful for this kind of thing
+      *
+      * Further note IE 6/7 has problems when calculating widths with border width.
+      * It subtracts one px relative to the other browsers from the first column, and
+      * adds one to the end...
+      *
+      * If you want that effect I'd suggest setting a border-top/left on th/td's and
+      * then filling in the gaps with other borders.
+      */
+}
+
+table.display thead th {
+    padding: 3px 18px 3px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    * cursor: hand;
+}
+
+table.display tfoot th {
+    padding: 3px 18px 3px 10px;
+    font-weight: bold;
+}
+
+table.display tr.heading2 td {
+}
+
+table.display td {
+    padding: 3px 10px;
+}
+
+table.display td.center {
+    text-align: center;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables sorting
+ */
+
+.sorting_asc {
+    background: url(<%= asset_path 'datatable/sort_asc.png' %>) no-repeat center right;
+}
+
+.sorting_desc {
+    background: url(<%= asset_path 'datatable/sort_desc.png' %>) no-repeat center right;
+}
+
+.sorting {
+    background: url(<%= asset_path 'datatable/sort_both.png' %>) no-repeat center right;
+}
+
+.sorting_asc_disabled {
+    background: url(<%= asset_path 'datatable/sort_asc_disabled.png' %>) no-repeat center right;
+}
+
+.sorting_desc_disabled {
+    background: url(<%= asset_path 'datatable/sort_desc_disabled.png' %>) no-repeat center right;
+}
+
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables row classes
+ */
+table.display tr.odd.gradeA {
+}
+
+table.display tr.even.gradeA {
+}
+
+table.display tr.odd.gradeC {
+}
+
+table.display tr.even.gradeC {
+}
+
+table.display tr.odd.gradeX {
+}
+
+table.display tr.even.gradeX {
+}
+
+table.display tr.odd.gradeU {
+}
+
+table.display tr.even.gradeU {
+}
+
+
+tr.odd {
+}
+
+tr.even {
+}
+
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Misc
+ */
+.dataTables_scroll {
+    clear: both;
+}
+
+.dataTables_scrollBody {
+    *margin-top: -1px;
+}
+
+.top, .bottom {
+    padding: 15px;
+}
+
+.top .dataTables_info {
+    float: none;
+}
+
+.clear {
+    clear: both;
+}
+
+.dataTables_empty {
+    text-align: center;
+}
+
+tfoot input {
+    margin: 0.5em 0;
+    width: 100%;
+}
+
+tfoot input.search_init {
+}
+
+td.group {
+
+}
+
+td.details {
+
+}
+
+
+.example_alt_pagination div.dataTables_info {
+    width: 40%;
+}
+
+.paging_full_numbers {
+    width: 70%;
+    height: 22px;
+    line-height: 22px;
+}
+
+.paging_full_numbers span.paginate_button,
+.paging_full_numbers span.paginate_active {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    padding: 2px 5px;
+    margin: 0 3px;
+    cursor: pointer;
+    *cursor: hand;
+}
+
+.paging_full_numbers span.paginate_button {
+}
+
+.paging_full_numbers span.paginate_button:hover {
+}
+
+.paging_full_numbers span.paginate_active {
+}
+
+table.display tr.even.row_selected td {
+}
+
+table.display tr.odd.row_selected td {
+}
+
+
+/*
+ * Sorting classes for columns
+ */
+/* For the standard odd/even */
+tr.odd td.sorting_1 {
+}
+
+tr.odd td.sorting_2 {
+}
+
+tr.odd td.sorting_3 {
+}
+
+tr.even td.sorting_1 {
+}
+
+tr.even td.sorting_2 {
+}
+
+tr.even td.sorting_3 {
+}
+
+
+/* For the Conditional-CSS grading rows */
+/*
+ 	Colour calculations (based off the main row colours)
+  Level 1:
+		dd > c4
+		ee > d5
+	Level 2:
+	  dd > d1
+	  ee > e2
+ */
+tr.odd.gradeA td.sorting_1 {
+}
+
+tr.odd.gradeA td.sorting_2 {
+}
+
+tr.odd.gradeA td.sorting_3 {
+}
+
+tr.even.gradeA td.sorting_1 {
+}
+
+tr.even.gradeA td.sorting_2 {
+}
+
+tr.even.gradeA td.sorting_3 {
+}
+
+tr.odd.gradeC td.sorting_1 {
+}
+
+tr.odd.gradeC td.sorting_2 {
+}
+
+tr.odd.gradeC td.sorting_3 {
+}
+
+tr.even.gradeC td.sorting_1 {
+}
+
+tr.even.gradeC td.sorting_2 {
+}
+
+tr.even.gradeC td.sorting_3 {
+}
+
+tr.odd.gradeX td.sorting_1 {
+}
+
+tr.odd.gradeX td.sorting_2 {
+}
+
+tr.odd.gradeX td.sorting_3 {
+}
+
+tr.even.gradeX td.sorting_1 {
+}
+
+tr.even.gradeX td.sorting_2 {
+}
+
+tr.even.gradeX td.sorting_3 {
+}
+
+tr.odd.gradeU td.sorting_1 {
+}
+
+tr.odd.gradeU td.sorting_2 {
+}
+
+tr.odd.gradeU td.sorting_3 {
+}
+
+tr.even.gradeU td.sorting_1 {
+}
+
+tr.even.gradeU td.sorting_2 {
+}
+
+tr.even.gradeU td.sorting_3 {
+}
+
+
+/*
+ * KeyTable
+ */
+table.KeyTable td {
+}
+
+table.KeyTable td.focus {
+}
+
+table.display tr.gradeA {
+}
+
+table.display tr.gradeC {
+}
+
+table.display tr.gradeX {
+}
+
+table.display tr.gradeU {
+}
+
+div.box {
+    height: 100px;
+    padding: 10px;
+    overflow: auto;
+}

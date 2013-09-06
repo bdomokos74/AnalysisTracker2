@@ -1,0 +1,270 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+#sidePanel {
+    width: 255px;
+    position: fixed;
+    left: -221px;
+    top: 30px;
+    height: 100%;
+    padding: 0;
+
+}
+
+#panelContent {
+    float: left;
+    width: 200px;
+    height: 100%;
+    padding-top: 40px;
+    padding-left: 20px;
+}
+
+#panelHandle {
+    position: relative;
+    margin-top: 0;
+    top: 30%;
+    height: 50px;
+    width: 35px;
+    float: right;
+    cursor: pointer;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.theme_title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+}
+.theme_subtitle {
+    font-family: "Open Sans", arial, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.theme_smalltitle {
+    font-family: "Open Sans", arial, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.theme_font {
+    font-family: "Open Sans", arial, sans-serif;
+    font-weight: 300;
+}
+
+.theme_form_separator {
+    font-family: "Open Sans", arial, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    border-bottom: solid 1px;
+}
+
+.text_small {
+    font-size: 8pt;
+}
+
+.text_normal {
+    font-size: 11pt;
+}
+
+body, input, select, textarea {
+    font-family: "Open Sans",arial,sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body.theme_home {
+}
+
+
+.theme_font {
+    font-family: "Open Sans", arial, sans-serif;
+    font-weight: 300;
+}
+
+.theme_banner, .odd {
+    background: #EFEFEF;
+}
+
+
+
+
+
+
+
+
+.sbutton {
+    padding-left: 20px;
+    display: block;
+    display: block;
+    height: 38px;
+    line-height: 38px;
+    text-align: left;
+    margin-left: -20px;
+    width: 200px;
+    border: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.theme_side_button {
+    background-color: #1BA0E1;
+    color: #FFFFFF !important;
+
+}
+
+.theme_button {
+    /*border: solid 1px #F1F1F1;*/
+    background-color: #1BA0E1;
+    color: #FFFFFF !important;
+    font-family: "Open Sans", arial, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.theme_background_highlight_hover, .theme_button:hover {
+    background: #1388A8;
+}
+
+body, html {
+    background:  url(<%= asset_path 'hb.png' %> ) no-repeat fixed right bottom #FFFFFF;
+    color: #424242;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*.theme_background {*/
+    /*background: ${background};*/
+    /*color: ${color};*/
+/*}*/
+
+.theme_background_highlight, .dataTables  tbody tr.even:hover, .dataTables  tbody tr.odd:hover {
+    background: #1BA0E1;;
+    color: #FFFFFF !important;
+}
+
+.theme_background_panel_highlight, .dataTables_length, .dataTables_filter, .dataTables_info, .dataTables_paginate {
+    background:  none repeat scroll 0 0 #E1E1E1;
+    color: #424242;
+}
+.theme_transparent {
+    color: #424242;
+}
+
+
+
+.symbol {
+    font-family: 'WebSymbolsRegular',Arial,sans-serif !important;
+}
+@font-face {
+    font-family: 'WebSymbolsRegular';
+    src: url(<%= asset_path 'websymbols/websymbols-regular-webfont.eot' %>);
+    src: url(<%= asset_path 'websymbols/websymbols-regular-webfont.eot' %>) format('embedded-opentype'),
+    url(<%= asset_path 'websymbols/websymbols-regular-webfont.woff' %>) format('woff'),
+    url(<%= asset_path 'websymbols/websymbols-regular-webfont.ttf' %>) format('truetype'),
+    url(<%= asset_path 'websymbols/websymbols-regular-webfont.svg#WebSymbolsRegular' %>) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+.menuBanner {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    z-index: 99999995;
+
+    font-family: "Open Sans", arial, sans-serif;
+    font-weight: 300;
+
+}
+
+.menuBanner .menuBanner_title {
+    padding-left: 50px;
+    line-height: 30px;
+    float: left;
+    font-size: 18px;
+}
+
+.menuBanner .topLeft {
+    float: left;
+}
+
+.menuBanner .topRight {
+    height: 50px;
+    float: right;
+}
+
+
+
+.main_content {
+    max-width: 11000px;
+    min-width: 400px;
+    padding-top: 50px;
+    margin-right: 50px;
+    margin-left: 290px;
+}
+
+
+
+
+
+#footer {
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
+}
+
+
+
+#pinSidebarButton {
+    float: right;
+    width: 32px;
+    height: 32px;
+    margin-top: -25px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.pinned {
+    width: 32px;
+    height: 32px;
+    background: url(<%= asset_path 'pinned16.png' %>) 8px 8px no-repeat;
+}
+
+.unpinned {
+    width: 32px;
+    height: 32px;
+    background: url(<%= asset_path 'unpinned16.png' %>) 8px 8px no-repeat;
+}
