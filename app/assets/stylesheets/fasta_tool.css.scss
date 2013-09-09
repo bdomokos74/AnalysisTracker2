@@ -1,0 +1,71 @@
+// Place all the styles related to the FastaTool controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.fasta_content {
+  position: absolute;
+}
+
+.hidden {
+  visibility: hidden;
+}
+.visible {
+  visibility: visible;
+}
+#placeholder {
+  height: 80px;
+}
+.sequence {
+  font-size: 16px;
+  font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
+  /*white-space: pre;*/
+  /*line-height: 2px;*/
+  text-align: left;
+}
+
+.ctrl {
+  background-color: #f0f0f0;
+}
+.nodisp {
+  display: none;
+}
+
+/* ctl1*/
+#col1 {
+  float: left;
+  width: 60px;
+}
+#col2 {
+  float: right;
+}
+/*panel 1*/
+#col2_1 {
+  float: left;
+  width: 372px;
+}
+#col2_2 {
+  float: right;
+}
+/*ctl 1*/
+#col2_2_1 {
+  float: left;
+  width: 50px;
+}
+#col2_2_2 {
+  float: right;
+}
+/*panel 2*/
+#col2_2_2_1 {
+  float: left;
+  width: 372px;
+}
+#col2_2_2_2 {
+  float: right;
+
+}
+/*ctl 2*/
+#col2_2_2_2_1 {
+  float: left;
+  width: 50px;
+}
+

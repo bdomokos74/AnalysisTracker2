@@ -6,6 +6,7 @@
     <%= stylesheet_link_tag  "application", :media => "all" %>
     <%= stylesheet_link_tag "datatables", :media => "all" %>
     <%= javascript_include_tag "application" %>
+    <!--<%= javascript_include_tag "fasta_tool" %>-->
     <%= csrf_meta_tags %>
 </head>
 
@@ -45,8 +46,8 @@
                     <!--<g:pageProperty name="page.sidebar"/>-->
                     <button id="servers_button" class="sbutton theme_button">Servers</button>
                     <button id="tasks_button" class="sbutton theme_button ">Tasks</button>
-                    <div class="sidebar_delimiter"
-                         style="height: 5px;border-bottom: solid 1px #ffffff;margin-right: 20px;"></div>
+                    <div class="sidebar_delimiter" style="height: 5px;border-bottom: solid 1px #ffffff;margin-right: 20px;"></div>
+                    <button id="fasta_button" class="sbutton theme_button ">Fasta</button>
 
 
 
@@ -60,6 +61,10 @@
 
             <div id="panelHandle" class="theme_background_highlight theme_shadow"></div>
         </div>
+
+        <script type="text/javascript">
+            <%= render :partial => "pages.js" %>
+        </script>
 
         <div style="float: right;width: 50px;"></div>
 

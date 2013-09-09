@@ -1,4 +1,7 @@
 AnalysisTracker2::Application.routes.draw do
+  get "fasta_tool/index"
+  get "fasta_tool/load_fasta"
+
   resources :analysis_results
   resources :analysis_tasks
   resources :servers
@@ -6,6 +9,7 @@ AnalysisTracker2::Application.routes.draw do
   match 'cron/check' => 'cron_tasks#check_queue'
   match 'pages/task_browser' => 'pages#tasks'
   match 'pages/server_browser' => 'pages#servers'
+  match 'pages/fasta' => 'pages#fasta'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

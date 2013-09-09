@@ -16,5 +16,9 @@ class PagesController < ApplicationController
     end
   end
 
+  def fasta
+    @icon = "genetics.png"
+    render 'fasta_tool/index'
+  end
 end
 
