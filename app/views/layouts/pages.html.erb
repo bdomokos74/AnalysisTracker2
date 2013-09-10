@@ -5,8 +5,9 @@
     <%= stylesheet_link_tag  "main", :media => "all" %>
     <%= stylesheet_link_tag  "application", :media => "all" %>
     <%= stylesheet_link_tag "datatables", :media => "all" %>
+    <%= stylesheet_link_tag "tools", :media => "all" %>
     <%= javascript_include_tag "application" %>
-    <!--<%= javascript_include_tag "fasta_tool" %>-->
+
     <%= csrf_meta_tags %>
 </head>
 
@@ -49,8 +50,6 @@
                     <div class="sidebar_delimiter" style="height: 5px;border-bottom: solid 1px #ffffff;margin-right: 20px;"></div>
                     <button id="fasta_button" class="sbutton theme_button ">Fasta</button>
 
-
-
                     <!--<g:ifPageProperty name="page.information">-->
                         <!--<div style="width:180px;padding-top: 10px;">-->
                             <!--<g:pageProperty name="page.information"/>-->
@@ -63,7 +62,7 @@
         </div>
 
         <script type="text/javascript">
-            <%= render :partial => "pages.js" %>
+            <%= render :partial => "shared/pages.js" %>
         </script>
 
         <div style="float: right;width: 50px;"></div>

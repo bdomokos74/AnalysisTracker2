@@ -1,0 +1,33 @@
+<div id="fastaTableContainer" class="dataTableContainer">
+    <h1 class="theme_title">Fasta browser</h1>
+    <div id="fastaTable_wrapper" class="dataTables_wrapper">
+        <div id="fastaTable_length" class="dataTables_length">
+            Search:
+            <input id="fasta_search1" type="text" size="40">
+        </div>
+        <div id="fastaTable_filter" class="dataTables_filter">
+            Search:
+            <input id="fasta_search2" type="text" size="40">
+        </div>
+        <div id="fastaTable_processing" class="dataTables_processing" style="visibility: hidden;">Processing...</div>
+
+        <table id="fastaTable" class="dataTables" width="100%;">
+            <thead>
+                <tr>
+                    <th class="sorting">ID</th>
+                    <th id="fasta_a_panel_contigname" class="sorting">Fasta A</th>
+                    <th id="fasta_b_panel_contigname" class="sorting">Fasta B</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="odd_nohover">
+                    <td></td>
+                    <td id="fasta_a_panel" class="sequence"></td>
+                    <td id="fasta_b_panel" class="sequence"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

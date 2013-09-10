@@ -1,15 +1,17 @@
 AnalysisTracker2::Application.routes.draw do
-  get "fasta_tool/index"
-  get "fasta_tool/load_fasta"
 
   resources :analysis_results
   resources :analysis_tasks
   resources :servers
 
-  match 'cron/check' => 'cron_tasks#check_queue'
-  match 'pages/task_browser' => 'pages#tasks'
-  match 'pages/server_browser' => 'pages#servers'
-  match 'pages/fasta' => 'pages#fasta'
+  get 'tools', to: 'tools#index'
+  match 'tools/load_fasta', to: 'tools#load_fasta'
+  get 'cron/check', to: 'cron_tasks#check_queue'
+
+  get 'pages/task_browser', to: 'pages#tasks'
+  get 'pages/server_browser', to: 'pages#servers'
+  get 'pages/fasta', to: 'pages#fasta'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -60,7 +62,7 @@ AnalysisTracker2::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'pages#tasks'
+  root :to => 'tools#index'
 
   # See how all your routes lay out with "rake routes"
 
